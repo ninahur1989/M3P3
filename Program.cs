@@ -6,7 +6,16 @@ namespace M3P3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MessageBox messageBox = new MessageBox();
+            messageBox.Open();
+            if(messageBox.Result == "Ok")
+            {
+                Console.WriteLine("Operation was confirmed");
+            }
+            else if(messageBox.Result == "Cancel")
+            {
+                Console.WriteLine("Operation was denied");
+            }
         }
     }
 }
